@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Stats preview card component</title>
+    <!-- <link rel="stylesheet" href="styles.css" /> -->
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <!-- <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Lexend+Deca:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              Inter: ["Inter", "sans-serif "],
+              Deca: ["Lexend Deca", "sans-serif"],
+            },
+            colors: {
+              clifford: "#da373d",
+              mainbackground: "hsl(233, 47%, 7%)",
+              cardbackground: "hsl(244, 38%, 16%)",
+              accent: "hsl(277, 64%, 61%)",
+
+              white: "hsl(0, 0%, 100%)",
+              mainparagraph: " hsla(0, 0%, 100%, 0.75)",
+              statheadings: "hsla(0, 0%, 100%, 0.6)",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body
+    class="flex flex-col bg-mainbackground font-Inter items-center justify-center max-auto min-h-screen"
+  >
+    <main>
+      <div
+        class="flex flex-col mx-auto h-[750px] w-[300px] m-8 overflow-hidden rounded-lg bg-cardbackground drop-shadow-sm md:m-0 auto lg:m-0 auto md:h-[360px] md:w-[890px] md:flex-row-reverse"
+      >
+        <section class="relative md:w-[100%]">
+          <img
+            src="images/image-header-mobile.jpg"
+            alt="mobile header"
+            class="object-cover md:hidden"
+          />
+          <img
+            src="images/image-header-desktop.jpg"
+            alt="desktop header"
+            class="hidden object-cover md:w-[100%] md:h-[100%] md:block"
+          />
+          <!-- Background Overlay -->
+          <div class="absolute inset-0 bg-accent opacity-70"></div>
+        </section>
+        <section class="p-4 m-4 md:text-start md:w-[100%] md:p-10">
+          <h1 class="text-white text-2xl font-bold text-center md:text-4xl">
+            Get <span class="text-accent">insights</span> that help your
+            business grow.
+          </h1>
+          <p
+            class="text-mainparagraph text-center text-sm mt-5 mb-7 p-2 md:text-l md:mb-10 md:text-start md:ml-2"
+          >
+            Discover the benefits of data analytics and make better decisions
+            regarding revenue, customer experience, and overall efficiency.
+          </p>
+          <div
+            class="mt-4 flex flex-col justify-center items-center md:flex md:flex-row md:p-2"
+          >
+            <div class="mt-4 md:mr-14 md:mt-0">
+              <p class="text-white font-bold text-xl text-center md:text-start">
+                10K+
+              </p>
+              <p class="text-statheadings uppercase mt-1 text-xs">companies</p>
+            </div>
+            <div class="mt-4 md:mr-14 md:mt-0">
+              <p class="text-white font-bold text-xl text-center md:text-start">
+                314
+              </p>
+              <p class="text-statheadings uppercase mt-1 text-xs">templates</p>
+            </div>
+            <div class="mt-4 md:mr-14 md:mt-0">
+              <p class="text-white font-bold text-xl text-center md:text-start">
+                12M+
+              </p>
+              <p class="text-statheadings uppercase mt-1 text-xs">queries</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <div class="mt-8 text-sm text-white md:mt-8">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. <br />
+      Coded by <a href="#" class="text-accent">Samar Osman</a>.
+    </div>
+  </body>
+</html>
